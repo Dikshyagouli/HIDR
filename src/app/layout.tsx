@@ -16,19 +16,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+    <ClerkProvider>
     <html
       lang="en"
       className={`h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <ClerkProvider>
+        
           
           {children}
-        </ClerkProvider>
+        
 
         <Toaster toastOptions={{duration: 1500}}/>
 
       </body>
     </html>
+    </ClerkProvider>
   );
 }
